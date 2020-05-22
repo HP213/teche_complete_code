@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^storedata', storeData),
     re_path(r'^predict', query),
-    re_path(r'^multiple', query_multiple)
+    re_path(r'^multiple', query_multiple),
+    path("", index, name="index")
 ]

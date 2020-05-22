@@ -6,6 +6,7 @@ import pandas as pd
 import os
 import pprint
 import numpy as np
+from django.shortcuts import render
 from pickle import load
 scaler_x = load(open(os.path.join('notebook_files','scaler_x.pkl'), 'rb'))
 scaler_y = load(open(os.path.join('notebook_files','scaler_y.pkl'),'rb'))
@@ -50,3 +51,6 @@ def query_multiple(request):
     y = predict_multiple(np.array(x))
     pp.pprint(y)
     return Response(y,status=200)
+
+def index(request):
+    return render(request, "build/index.html")
