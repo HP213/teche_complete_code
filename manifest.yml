@@ -1,0 +1,4 @@
+  applications:
+  - name: SmartServerCooler
+    random-route: true
+    memory: 128M
