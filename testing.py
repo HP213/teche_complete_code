@@ -2,8 +2,8 @@ import requests
 import psutil
 id = 45
 
-count = psutil.cpu_count()
 temp = psutil.sensors_temperatures()['coretemp'][0][1]
+count = psutil.cpu_count()
 
 url = 'http://localhost:8000/storedata'
 
